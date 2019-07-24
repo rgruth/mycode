@@ -1,0 +1,25 @@
+---
+# if we run this and have gather_facts set to no, then ansible_facts will be about our network devs
+- name: Harvest Arista facts
+  eos_facts:
+  when: ansible_network_os == "eos"
+
+- name: Push to the local system -- by special tag request only 
+  copy:
+    # use the to_no_json filter to display pretty json output
+    content: "{{ ansible_facts | to_nice_json }}"
+    dest: "/home/student/mycode/{{ inventory_hostname }}.txt"
+    # the inventory_hostname variable always resolves to the current host being iterated against
+  tags:
+    - never
+    - grabfacts
+
+  # Precheck conditional number of interfaces
+- fail:
+    msg: "FAIL. Network device lacks the correct number of interfaces."
+  when: ansible_facts.net_interfaces|length != switchint
+
+  # Firmware precheck on correct major and minor versions
+- fail:
+    msg: "FAIL. Network device is running wrong firmware."
+  when: "switchver not in ansible_facts.net_version"

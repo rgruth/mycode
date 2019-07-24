@@ -1,0 +1,27 @@
+[aristaswitchessecure]
+; description of our arista inventory
+sw1         ansible_host=napya-314-sw1
+sw2         ansible_host=napya-314-sw2
+    
+[ciscoswitches]
+; description of our cisco inventory
+cisco1      ansible_host=192.168.0.1
+cisco2      ansible_host=192.168.0.2
+    
+[aristaswitches:vars]
+; variables specific to arista switches
+ansible_network_os=eos
+ansible_connection=network_cli
+ansible_become=yes
+ansible_become_method=enable
+ansible_user=admin
+ansible_ssh_pass=alta3
+    
+[ciscoswitches:vars]
+; variables specific to cisco switches
+#ansible_network_os=ios
+#sible_connection=network_cli
+#ansible_become=yes
+#ansible_become_method=enable
+#ansible_user=admin
+#ansible_ssh_pass=ciscoskeerit123
