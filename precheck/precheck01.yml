@@ -1,0 +1,15 @@
+---
+- name: Another network playbook example
+  hosts: ~^arista
+  gather_facts: no
+
+  tasks:
+          - name: Harvest Arista facts
+            eos_facts:
+            when: ansible_network_os == 'eos'
+
+          - name: Push to the local system
+            copy:
+                    content: "{{ ansible_facts | to_nice_json }}"
+                    dest: "/home/student/mycode/{{ inventory_hostname }}.txt"
+

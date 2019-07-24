@@ -1,0 +1,188 @@
+{
+    "discovered_interpreter_python": "/usr/bin/python",
+    "net_all_ipv4_addresses": [
+        "10.1.55.249"
+    ],
+    "net_all_ipv6_addresses": [],
+    "net_api": "cliconf",
+    "net_filesystems": [
+        "file:",
+        "flash:",
+        "system:"
+    ],
+    "net_fqdn": "napya-314-sw2",
+    "net_gather_subset": [
+        "hardware",
+        "default",
+        "interfaces"
+    ],
+    "net_hostname": "napya-314-sw2",
+    "net_image": "flash:/vEOS-lab.swi",
+    "net_interfaces": {
+        "Ethernet1": {
+            "bandwidth": 0,
+            "description": "",
+            "duplex": "duplexFull",
+            "ipv4": {},
+            "lineprotocol": "up",
+            "macaddress": "0c:86:5a:9e:41:00",
+            "mtu": 9214,
+            "operstatus": "connected",
+            "type": "bridged"
+        },
+        "Ethernet10": {
+            "bandwidth": 0,
+            "description": "",
+            "duplex": "duplexFull",
+            "ipv4": {},
+            "lineprotocol": "up",
+            "macaddress": "0c:86:5a:9e:41:09",
+            "mtu": 9214,
+            "operstatus": "connected",
+            "type": "bridged"
+        },
+        "Ethernet11": {
+            "bandwidth": 0,
+            "description": "",
+            "duplex": "duplexFull",
+            "ipv4": {},
+            "lineprotocol": "up",
+            "macaddress": "0c:86:5a:9e:41:0a",
+            "mtu": 9214,
+            "operstatus": "connected",
+            "type": "bridged"
+        },
+        "Ethernet12": {
+            "bandwidth": 0,
+            "description": "",
+            "duplex": "duplexFull",
+            "ipv4": {},
+            "lineprotocol": "up",
+            "macaddress": "0c:86:5a:9e:41:0b",
+            "mtu": 9214,
+            "operstatus": "connected",
+            "type": "bridged"
+        },
+        "Ethernet13": {
+            "bandwidth": 0,
+            "description": "",
+            "duplex": "duplexFull",
+            "ipv4": {},
+            "lineprotocol": "up",
+            "macaddress": "0c:86:5a:9e:41:0c",
+            "mtu": 9214,
+            "operstatus": "connected",
+            "type": "bridged"
+        },
+        "Ethernet2": {
+            "bandwidth": 0,
+            "description": "",
+            "duplex": "duplexFull",
+            "ipv4": {},
+            "lineprotocol": "up",
+            "macaddress": "0c:86:5a:9e:41:01",
+            "mtu": 9214,
+            "operstatus": "connected",
+            "type": "bridged"
+        },
+        "Ethernet3": {
+            "bandwidth": 0,
+            "description": "",
+            "duplex": "duplexFull",
+            "ipv4": {},
+            "lineprotocol": "up",
+            "macaddress": "0c:86:5a:9e:41:02",
+            "mtu": 9214,
+            "operstatus": "connected",
+            "type": "bridged"
+        },
+        "Ethernet4": {
+            "bandwidth": 0,
+            "description": "",
+            "duplex": "duplexFull",
+            "ipv4": {},
+            "lineprotocol": "up",
+            "macaddress": "0c:86:5a:9e:41:03",
+            "mtu": 9214,
+            "operstatus": "connected",
+            "type": "bridged"
+        },
+        "Ethernet5": {
+            "bandwidth": 0,
+            "description": "",
+            "duplex": "duplexFull",
+            "ipv4": {},
+            "lineprotocol": "up",
+            "macaddress": "0c:86:5a:9e:41:04",
+            "mtu": 9214,
+            "operstatus": "connected",
+            "type": "bridged"
+        },
+        "Ethernet6": {
+            "bandwidth": 0,
+            "description": "",
+            "duplex": "duplexFull",
+            "ipv4": {},
+            "lineprotocol": "up",
+            "macaddress": "0c:86:5a:9e:41:05",
+            "mtu": 9214,
+            "operstatus": "connected",
+            "type": "bridged"
+        },
+        "Ethernet7": {
+            "bandwidth": 0,
+            "description": "",
+            "duplex": "duplexFull",
+            "ipv4": {},
+            "lineprotocol": "up",
+            "macaddress": "0c:86:5a:9e:41:06",
+            "mtu": 9214,
+            "operstatus": "connected",
+            "type": "bridged"
+        },
+        "Ethernet8": {
+            "bandwidth": 0,
+            "description": "",
+            "duplex": "duplexFull",
+            "ipv4": {},
+            "lineprotocol": "up",
+            "macaddress": "0c:86:5a:9e:41:07",
+            "mtu": 9214,
+            "operstatus": "connected",
+            "type": "bridged"
+        },
+        "Ethernet9": {
+            "bandwidth": 0,
+            "description": "",
+            "duplex": "duplexFull",
+            "ipv4": {},
+            "lineprotocol": "up",
+            "macaddress": "0c:86:5a:9e:41:08",
+            "mtu": 9214,
+            "operstatus": "connected",
+            "type": "bridged"
+        },
+        "Management1": {
+            "bandwidth": 1000000000,
+            "description": "",
+            "duplex": "duplexFull",
+            "ipv4": {
+                "address": "10.1.55.249",
+                "masklen": 12
+            },
+            "lineprotocol": "up",
+            "macaddress": "aa:a3:a3:df:31:f9",
+            "mtu": 1500,
+            "operstatus": "connected",
+            "type": "routed"
+        }
+    },
+    "net_memfree_mb": 1217,
+    "net_memtotal_mb": 1967,
+    "net_model": "vEOS",
+    "net_neighbors": {},
+    "net_python_version": "2.7.15+",
+    "net_serialnum": "",
+    "net_system": "eos",
+    "net_version": "4.22.0F"
+}
