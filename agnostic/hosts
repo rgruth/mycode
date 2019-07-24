@@ -1,0 +1,4 @@
+[myswitches]
+sw1 ansible_host=napya-314-sw1
+sw2 ansible_host=napya-314-sw2
+
