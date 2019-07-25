@@ -1,0 +1,46 @@
+---
+- name: A Play to play with python
+  hosts: localhost
+
+  vars:
+          test_list:
+                  - '192.168.2.1'
+                  - '10.10.0.2'
+                  - 'host.example.org'
+                  - '192.168.70.0/24'
+                  - 'fe80::100/10'
+                  - True
+                  - 'Witcher3 The Wild Hunt'
+                  - 'Earl Grey Tea, hot'
+          mytest_string: "ncc1701 uss enterprise"
+          myaddresses: ['192.168.2.101', '10.0.3.50', '171.172.32.1']
+
+  tasks:
+          - name: Just want the IPs
+            debug:
+                    msg: "{{ test_list | ipaddr }}"
+          - name: spawn rando mac
+            debug:
+                    msg: "{{'52:54:00'}}"
+          - name: some don't requ mustache brackets
+            debug:
+                    var: "'52:54:11'|random_mac"
+          - name: Test if our string ends in prise
+            debug:
+                    msg: "{{ mytest_string.endswith('prise') }}"
+
+          - name: This only prints when this tests true using python
+            debug:
+                    msg: "Ahh but is it the Enterprise subclass A, B, C, or D?"
+            when: mytest_string.endswith('prise')
+
+          - name: Jinja2 way of capitalizing a string
+            debug:
+                    msg: "{{ mytest_string | capitalize }}"
+          - name: Python way of capitalizing a string
+            debug:
+                    msg: "{{ mytest_string.capitalize() }}"
+
+          - name: pop the number 50 on the screen
+            debug:
+                    msg: "{{ (myaddresses|ipaddr('10.0.0.0/8'))[0].split('.')[3] }}"

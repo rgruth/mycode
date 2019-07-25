@@ -1,0 +1,15 @@
+---
+- name: Push a script and run it
+  hosts: localhost
+
+  tasks:
+          - script: /home/student/mycode/pyhello.py
+            args:
+                    exectable: python3
+            register: results
+
+          - debug:
+                  msg: "Here is what came back: {{ results }}"
+
+          - debug:
+                  msg: "The output of the Python is {{ results.stdout }}"
